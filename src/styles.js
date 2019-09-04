@@ -1,13 +1,6 @@
 import styled, { css } from "styled-components";
 import FilteredPropsInputField from "./FilteredPropsInputField";
 
-// Convert to rem a unitless value passed in
-// ${rem`24`}; => 24/16 = 1.5rem
-export const rem = (value) => {
-  const conv = Number(value) / 16;
-  return `${conv}rem`;
-};
-
 export const PageWrapper = styled.section`
   &,
   & * {
@@ -20,34 +13,34 @@ export const PageWrapper = styled.section`
     border: none;
     border-top: 1px solid lightgrey;
 
-    margin-top: ${rem(24)};
-    margin-bottom: ${rem(24)};
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
   font-family: system-ui;
-  font-size: 16px;
-  line-height: 24px;
-  max-width: ${rem(560)};
+  font-size: 1rem;
+  line-height: 1.5rem;
+  max-width: 35em;
   margin-left: auto;
   margin-right: auto;
-  margin-top: ${rem(24)};
-  padding: ${rem(16)} ${rem(12)};
+  margin-top: 1.5rem;
+  padding: 1rem 0.75rem;
   border: 1px solid lightgrey;
   border-radius: 4px;
 `;
 
 export const CodeWrapper = styled.pre`
   font-family: monospace;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   background-color: hsl(210, 4%, 96%);
   overflow: auto;
-  padding: ${rem(12)};
+  padding: 0.75rem;
   margin: 0;
   border-radius: 4px;
 
   & strong {
-    margin-top: ${rem(24)};
+    margin-top: 1.5rem;
 
     &:first-child {
       margin-top: 0;
@@ -56,13 +49,13 @@ export const CodeWrapper = styled.pre`
 `;
 
 export const Title = styled.h1`
-  font-size: ${rem(16)};
-  line-height: ${rem(20)};
+  font-size: 1rem;
+  line-height: 1.25rem;
   margin-top: 0;
 `;
 
 export const Label = styled.label`
-  margin-top: ${rem(24)};
+  margin-top: 1.5rem;
   width: 100%;
 `;
 
@@ -70,16 +63,16 @@ export const Input = styled(FilteredPropsInputField)`
   background-color: white;
   border: 1px solid lightgrey;
   border-radius: 4px;
-  font-size: ${rem(16)};
-  line-height: ${rem(24)};
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-style: normal;
   font-weight: 400;
 
   width: 100%;
 
-  margin-top: ${rem(8)};
+  margin-top: 0.5rem;
 
-  padding: ${rem(12)} ${rem(12)};
+  padding: 0.75rem 0.75rem;
 
   &:focus,
   &:active {
@@ -161,14 +154,14 @@ export const StyledInlineErrorMessage = styled.div`
   color: rgb(120, 27, 0);
   display: block;
 
-  padding: ${rem(8)} ${rem(12)};
-  margin-top: ${rem(8)};
+  padding: 0.5rem 0.75rem;
+  margin-top: 0.5rem;
   white-space: pre-line;
 `;
 
 export const Submit = styled.button`
   width: 100%;
-  margin-top: ${rem(24)};
+  margin-top: 1.5rem;
 
   background-color: rgb(24, 81, 187);
   display: block;
