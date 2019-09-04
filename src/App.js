@@ -72,7 +72,6 @@ function App() {
                     autoCorrect="off"
                     autoComplete="name"
                     placeholder="your fullname"
-                    minLength="2"
                     valid={touched.fullname && !errors.fullname}
                     error={touched.fullname && errors.fullname}
                   />
@@ -91,7 +90,6 @@ function App() {
                     autoCorrect="off"
                     autoComplete="email"
                     placeholder="your email"
-                    minLength="2"
                     valid={touched.email && !errors.email}
                     error={touched.email && errors.email}
                   />

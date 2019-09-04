@@ -67,11 +67,8 @@ export const Input = styled(FilteredPropsInputField)`
   line-height: 1.5rem;
   font-style: normal;
   font-weight: 400;
-
   width: 100%;
-
   margin-top: 0.5rem;
-
   padding: 0.75rem 0.75rem;
 
   &:focus,
@@ -92,17 +89,6 @@ export const Input = styled(FilteredPropsInputField)`
     -webkit-box-shadow: 0 0 0px 1000px #fff inset;
     transition: background-color 5000s ease-in-out 0s;
     -webkit-text-fill-color: black;
-  }
-
-  &:placeholder-shown:required {
-    box-shadow: none;
-  }
-
-  &:placeholder-shown:required:focus {
-    box-shadow: rgb(244, 129, 116) 0px 0px 2px 1px,
-      rgb(251, 178, 174) 0px 0px 0px 3px;
-    border: 1px solid rgb(191, 49, 12);
-    outline: none;
   }
 
   ${({ valid }) =>
@@ -173,36 +159,12 @@ export const Submit = styled.button`
   height: 3rem;
   white-space: nowrap;
   color: rgb(232, 243, 255) !important;
-  border: 2px solid rgb(24, 81, 187);
-  border-radius: 4px;
   padding: 0.5rem 1rem;
 
-  &:active {
-    cursor: pointer;
-    background-color: rgb(18, 61, 140);
-    box-shadow: none;
-    border-width: 2px;
-    border-style: solid;
-    border-color: rgb(18, 61, 140);
-    border-image: initial;
-    outline: none;
-  }
-
-  &:focus {
-    cursor: pointer;
-    background-color: rgb(18, 61, 140);
-    box-shadow: rgb(124, 177, 246) 0px 0px 1px 1px,
-      rgb(177, 211, 253) 0px 0px 0px 3px;
-    border: 2px solid rgb(2, 30, 79);
-    outline: none;
-  }
-
+  &:active,
+  &:focus,
   &:hover {
     cursor: pointer;
-    background-color: rgb(46, 111, 213);
-    box-shadow: rgba(17, 30, 82, 0.4) 0px 1px 4px 0px,
-      rgba(0, 47, 158, 0.22) 0px 2px 12px 1px;
-    border: 2px solid rgb(46, 111, 213);
   }
 
   &:disabled {
@@ -210,8 +172,6 @@ export const Submit = styled.button`
     background-color: rgb(163, 168, 173);
     box-shadow: none;
     color: rgb(255, 255, 255) !important;
-    border: 2px solid rgb(163, 168, 173);
-    outline: none;
 
     &:hover,
     &:focus {
